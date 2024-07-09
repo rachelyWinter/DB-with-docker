@@ -10,5 +10,9 @@ EXPOSE 1433
 # Create a volume for SQL Server data
 VOLUME /var/opt/mssql
 
+USER root
+RUN chown -R mssql /var/opt/mssql
+USER mssql
+
 # Start SQL Server
 CMD /opt/mssql/bin/sqlservr
