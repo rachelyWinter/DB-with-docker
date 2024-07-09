@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: mssql-service
+    repo: https://github.com/rachelyWinter/DB-with-docker
+    branch: master
+    env:
+      - key: ACCEPT_EULA
+        value: "Y"
+      - key: SA_PASSWORD
+        value: "Foir100#"
+    buildCommand: docker build -t foyer-db-image .
+    startCommand: docker run -e ACCEPT_EULA=Y -e SA_PASSWORD=YourStrong!Passw0rd -p 1433:1433 my-mssql-image
