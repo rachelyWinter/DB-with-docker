@@ -9,4 +9,4 @@ services:
       - key: SA_PASSWORD
         value: "Foir100#"
     buildCommand: docker build -t foyer-db-image .
-    startCommand: docker run -e ACCEPT_EULA=Y -e SA_PASSWORD=YourStrong!Passw0rd -p 1433:1433 my-mssql-image
+    startCommand: docker run -e ACCEPT_EULA=Y -e SA_PASSWORD=Foir100# -p 1433:1433 foyer-db-image
