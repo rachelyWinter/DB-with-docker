@@ -14,3 +14,4 @@ services:
     volumes:
       - ./data:/var/opt/mssql/data
       - ./backups:/var/opt/mssql/backups
+    user: root
