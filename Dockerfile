@@ -19,7 +19,7 @@ COPY ./backups /var/opt/mssql/backups
 # חשיפת הפורט 1433
 EXPOSE 1433
 
-
+USER root
 # הגדרת פקודת ההפעלה של הקונטיינר
 CMD ["/opt/mssql/bin/sqlservr"]
 
