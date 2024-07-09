@@ -12,10 +12,10 @@ VOLUME /var/opt/mssql
 
 USER root
 RUN chown -R mssql /var/opt/mssql
-RUN chmod +x /opt/mssql/bin/sqlservr && \
+RUN chmod +x /opt/mssql/bin/sqlserver && \
     chown -R mssql /var/opt/mssql
 
 #USER mssql
 
 # Start SQL Server
-CMD /opt/mssql/bin/sqlservr
+CMD /opt/mssql/bin/sqlserver
